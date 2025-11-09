@@ -12,8 +12,5 @@ export const connectDB = async () => {
     console.log("Kết nối CSDL thất bại: ", error.message)
     process.exit(1) // exit with error
   }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 13dffa6d13039c39f75a056470dd5ab5606a068c

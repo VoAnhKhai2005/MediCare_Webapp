@@ -1,4 +1,4 @@
-import DoctorCard from "../../components/Doctors/DoctorCard";
+import DoctorCard from "../../components/doctors/DoctorCard";
 import { doctors } from "../../assets/data/doctors";
 import Testimonial from "../../components/testimonial/Testimonial";
 

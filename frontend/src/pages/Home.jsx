@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../components/about/About.jsx";
 import ServiceList from "../components/services/ServiceList.jsx";
-import DoctorList from "../components/doctors/doctorList.jsx";
+import DoctorList from "../components/doctors/DoctorList.jsx";
 import FaqList from "../components/faq/FaqList.jsx";
 import Testimonial from '../components/testimonial/Testimonial.jsx';
 

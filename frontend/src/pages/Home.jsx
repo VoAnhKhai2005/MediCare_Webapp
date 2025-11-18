@@ -15,7 +15,7 @@ import About from "../components/about/About.jsx";
 import ServiceList from "../components/services/ServiceList.jsx";
 import DoctorList from "../components/doctors/DoctorList.jsx";
 import FaqList from "../components/faq/FaqList.jsx";
-import Testimonial from '../components/testimonial/Testimonial.jsx';
+import Testimonial from "../components/testimonial/Testimonial.jsx";
 
 const Home = () => {
   return (
@@ -192,11 +192,13 @@ const Home = () => {
             {/* ======== Feature Content ======== */}
             <div className="xl:w-[670px]">
               <h2 className="heading">
-                Nhận điều trị <br /> bất cứ lúc nào.
+                Nhận điều trị bất cứ lúc nào.
               </h2>
 
               <ul className="pl-4">
-                <li className="text_para">1. Đặt lịch hẹn.</li>
+                <li className="text_para">
+                  <br /> 1. Đặt lịch hẹn.
+                </li>
                 <li className="text_para">
                   2. Tìm kiếm bác sĩ và liên hệ với phòng khám của họ.
                 </li>
@@ -214,7 +216,7 @@ const Home = () => {
             <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
               <img src={featureImg} className="w-3/4" alt="" />
 
-              <div className="w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 pt-4 lg:px-4 lg:pb-[26px] rounded-[10px]">
+              <div className="w-[650px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 pt-4 lg:px-4 lg:pb-[26px] rounded-[10px]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-[6px] lg:gap-3">
                     <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-headingColor font-[600]">
@@ -271,9 +273,7 @@ const Home = () => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <h2 className="heading">
-                Thông tin có thể bạn quan tâm
-              </h2>
+              <h2 className="heading">Thông tin có thể bạn quan tâm</h2>
 
               <FaqList />
             </div>
@@ -287,17 +287,18 @@ const Home = () => {
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center">
-              Mọi người chia sẻ gì về chúng tôi</h2>
+              Mọi người chia sẻ gì về chúng tôi
+            </h2>
             <p className="text__para text-center">
-              Lắng nghe trải nghiệm thực tế từ những bệnh nhân đã sử dụng dịch vụ của chúng tôi.
-              Xem cách chúng tôi mang lại sự chăm sóc chuyên môn và sự hài lòng cho mọi người.
+              Lắng nghe trải nghiệm thực tế từ những bệnh nhân đã sử dụng dịch
+              vụ của chúng tôi. Xem cách chúng tôi mang lại sự chăm sóc chuyên
+              môn và sự hài lòng cho mọi người.
             </p>
           </div>
           <Testimonial />
         </div>
       </section>
       {/* ======== testimonail end ======== */}
-
     </div>
   );
 };

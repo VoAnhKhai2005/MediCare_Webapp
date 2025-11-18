@@ -28,7 +28,7 @@ const Feedback = () => {
                 {formateDate("10-20-2025")}
               </p>
               <p className="text__para mt-3 font-medium text-[15px]">
-                Good services, highly recommended.
+                Dịch vụ rất tốt, xứng đáng để thử.
               </p>
             </div>
           </div>
@@ -44,7 +44,7 @@ const Feedback = () => {
       {!showFeedbackForm && (
         <div className="text-center">
           <button className="btn" onClick={() => setShowFeedbackForm(true)}>
-            Give Feedback
+            Đánh giá
           </button>
         </div>
       )}

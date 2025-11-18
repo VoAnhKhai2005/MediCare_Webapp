@@ -6,11 +6,11 @@ const FeedbackForm = () => {
   const [hover, setHover] = useState(0);
   const [reviewText, setReviewText] = useState("");
 
-  const handleSubmitReview = async e=>{
+  const handleSubmitReview = async (e) => {
     e.preventDefault();
 
     // để api sử dụng ở đây
-  }
+  };
 
   return (
     <form action="">
@@ -58,11 +58,13 @@ const FeedbackForm = () => {
           className="border border-solid border-[#0066ff34] focus:outline outline-primaryColor w-full px-4 py-3 rounded-md"
           rows="5"
           placeholder="Viết ý kiến của bạn"
-          onChange={(e)=>setReviewText(e.target.value)}
+          onChange={(e) => setReviewText(e.target.value)}
         ></textarea>
       </div>
 
-      <button type="submit" onClick={handleSubmitReview} className="btn">Gửi nhận xét</button>
+      <button type="submit" onClick={handleSubmitReview} className="btn">
+        Gửi nhận xét
+      </button>
     </form>
   );
 };

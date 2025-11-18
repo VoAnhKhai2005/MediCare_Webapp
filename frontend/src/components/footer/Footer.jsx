@@ -9,12 +9,10 @@ import {
 } from "react-icons/ai";
 
 const socialLinks = [
-  
   {
-    path: "https://voanhkhai2005.github.io/Group7-LapTrinhWeb/",
+    path: "https://github.com/KaitoDeus/MediCare_Webapp",
     icon: <AiFillGithub className="group-hover:text-white w-4 h-5" />,
   },
-  
 ];
 
 const quickLinks01 = [

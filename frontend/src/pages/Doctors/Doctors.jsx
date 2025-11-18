@@ -1,21 +1,22 @@
 import DoctorCard from "../../components/doctors/DoctorCard";
 import { doctors } from "../../assets/data/doctors";
 import Testimonial from "../../components/testimonial/Testimonial";
+import { FaSearch } from "react-icons/fa";
 
 const Doctors = () => {
   return (
     <>
       <section className="bg-[#fff9ea]">
         <div className="container text-center">
-          <h2 className="heading">Find a Doctors</h2>
+          <h2 className="heading">Tra cứu thông tin bác sĩ</h2>
           <div className="max-w-[570px] mt-[30px] mx-auto bg-[#0066ff2c] rounded-md flex items-center justify-between">
             <input
               type="search"
               className="py-4 pl-4 pr-2 bg-transparent w-full outline-none cursor-pointer placeholder:text-textColor"
-              placeholder="Search Doctor"
+              placeholder="Tìm kiếm bác sĩ"
             />
             <button className="btn mt-0 rounded-[0px] rounded-r-md">
-              Search
+              <FaSearch />
             </button>
           </div>
         </div>
@@ -35,10 +36,12 @@ const Doctors = () => {
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center">
-              Mọi người chia sẻ gì về chúng tôi</h2>
+              Mọi người chia sẻ gì về chúng tôi
+            </h2>
             <p className="text__para text-center">
-              Lắng nghe trải nghiệm thực tế từ những bệnh nhân đã sử dụng dịch vụ của chúng tôi.
-              Xem cách chúng tôi mang lại sự chăm sóc chuyên môn và sự hài lòng cho mọi người.
+              Lắng nghe trải nghiệm thực tế từ những bệnh nhân đã sử dụng dịch
+              vụ của chúng tôi. Xem cách chúng tôi mang lại sự chăm sóc chuyên
+              môn và sự hài lòng cho mọi người.
             </p>
           </div>
           <Testimonial />

@@ -106,7 +106,7 @@ const Login = () => {
           </div>
 
           <p className="mt-5 text-textColor text-center">
-            Chư&apos;a có tài khoản ?{" "}
+            Chưa có tài khoản ?{" "}
             <Link
               to="/register"
               className="text-primaryColor 

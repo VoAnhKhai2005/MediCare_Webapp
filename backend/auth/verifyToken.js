@@ -22,7 +22,7 @@ export const authenticate = async (req, res, next) => {
     req.role = decoded.role
 
     // must be call the next()
-    next()
+    next();
   } catch (error) {
 
     if (error.name === 'TokenExpiredError') {

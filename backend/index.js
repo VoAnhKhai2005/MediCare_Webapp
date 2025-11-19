@@ -18,24 +18,9 @@ const corsOptions = {
 }
 
 app.get('/', (req, res) => {
-  res.send("Api is working")
+  res.send("Api đang hoạt động")
 })
 
-// database connection
-// mongoose.set('strictQuery', false)
-// const connectDB = async () => {
-//   try {
-//     await mongoose.connect(process.env.MONGO_URL, {
-//       useNewUrlParser: true,
-//       useUnifiedTopology: true,
-//     })
-
-//     console.log("Kết nối CSDL thành công!")
-//   } catch (error) {
-//     console.log("Kết nối CSDL thất bại: ", error.message)
-//     process.exit(1)
-//   }
-// }
 
 // Middleware
 app.use(express.json())
@@ -52,7 +37,7 @@ app.use('/api/v1/reviews', reviewRoute)
 // connectDB and listen
 connectDB().then(() => {
   app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server đang chạy trên cổng ${port}`);
   })
 })
 

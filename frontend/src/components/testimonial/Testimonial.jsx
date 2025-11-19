@@ -13,7 +13,7 @@ const Testimonial = () => {
     <div className="mt-[30px] lg:mt-[55px]">
       <Swiper
         modules={[Pagination]}
-        spaceBetween={30}
+        spaceBetween={50}
         slidesPerView={1}
         pagination={{ clickable: true }}
         breakpoints={{

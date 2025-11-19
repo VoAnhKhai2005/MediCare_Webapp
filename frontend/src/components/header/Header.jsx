@@ -1,5 +1,6 @@
 import { useEffect, useRef, useContext } from "react";
 import logo from "../../assets/images/logo.png";
+import ava from "../../assets/images/anonymous-avatar.jpg";
 
 import { NavLink, Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
@@ -37,11 +38,9 @@ const Header = () => {
     <header className="header flex items-center" ref={headerRef}>
       <div className="container">
         <div className="flex items-center justify-between">
-          {/* ======== Logo CẬP NHẬT ======== */}
           <div>
             <Link to="/home">
               {" "}
-              {/* Bọc logo bằng Link */}
               <img src={logo} alt="logo" />
             </Link>
           </div>
@@ -73,13 +72,13 @@ const Header = () => {
                 <Link
                   to={`${
                     role === "doctor"
-                      ? "/doctor/profile/me"
+                      ? "/doctors/profile/me"
                       : "/users/profile/me"
                   }`}
                 >
                   <figure className="w-[35px] h-[35px] rounded-full">
                     <img
-                      src={user?.photo}
+                      src={user?.photo || ava}
                       className="w-full rounded-full"
                       alt="user"
                     />

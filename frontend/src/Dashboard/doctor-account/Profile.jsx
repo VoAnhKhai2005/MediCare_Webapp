@@ -26,7 +26,6 @@ const Profile = ({ doctorData }) => {
     setFormData({
       name: doctorData?.name || "",
       email: doctorData?.email || "",
-      password: doctorData?.password || "",
       phone: doctorData?.phone || "",
       bio: doctorData?.bio || "",
       gender: doctorData?.gender || "",
@@ -199,7 +198,7 @@ const Profile = ({ doctorData }) => {
             type="email"
             name="email"
             value={formData.email}
-            onChange={handleInputChange}
+            // onChange={handleInputChange}
             placeholder="Địa chỉ email"
             className="form__input form__input-readonly"
             readOnly
@@ -271,9 +270,9 @@ const Profile = ({ doctorData }) => {
               className="form__input bg-white"
             >
               <option value="">Chọn</option>
-              <option value="surgeon">Bác sĩ ngoại khoa</option>
-              <option value="neurologist">Bác sĩ thần kinh</option>
-              <option value="dermatologist">Bác sĩ da liễu</option>
+              <option value="Bác sĩ ngoại khoa">Bác sĩ ngoại khoa</option>
+              <option value="Bác sĩ thần kinh">Bác sĩ thần kinh</option>
+              <option value="Bác sĩ da liễu">Bác sĩ da liễu</option>
             </select>
           </div>
 
@@ -453,13 +452,13 @@ const Profile = ({ doctorData }) => {
                   className="form__input"
                 >
                   <option value="">Chọn</option>
-                  <option value="sunday">Chủ nhật</option>
-                  <option value="monday">Thứ hai</option>
-                  <option value="tuesday">Thứ ba</option>
-                  <option value="wednesday">Thứ tư</option>
-                  <option value="thursday">Thứ năm</option>
-                  <option value="friday">Thứ sáu</option>
-                  <option value="saturday">Thứ bảy</option>
+                  <option value="Chủ nhật">Chủ nhật</option>
+                  <option value="Thứ hai">Thứ hai</option>
+                  <option value="Thứ ba">Thứ ba</option>
+                  <option value="Thứ tư">Thứ tư</option>
+                  <option value="Thứ năm">Thứ năm</option>
+                  <option value="Thứ sáu">Thứ sáu</option>
+                  <option value="Thứ bảy">Thứ bảy</option>  
                 </select>
               </div>
 

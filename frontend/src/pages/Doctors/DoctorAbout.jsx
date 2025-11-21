@@ -37,7 +37,7 @@ const DoctorAbout = ({
                 </span>
 
                 <p className="text-[16px] leading-6 font-medium text-textColor">
-                  {item.degree}
+                  {item.degree} 
                 </p>
               </div>
 

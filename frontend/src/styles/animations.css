@@ -1,0 +1,483 @@
+/* =============== COMPONENT ANIMATIONS =============== */
+
+/* Doctor Card Animations */
+.doctor__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 0%, rgba(0, 103, 255, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.doctor__card:hover::before {
+  opacity: 1;
+}
+
+.doctor__card img {
+  transition: transform 0.4s ease;
+}
+
+.doctor__card:hover img {
+  transform: scale(1.08);
+}
+
+/* Service Card Animations */
+.service__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service__card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0067ff, transparent);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.service__card:hover::after {
+  transform: translateX(100%);
+}
+
+.service__icon {
+  transition: all 0.3s ease;
+}
+
+.service__card:hover .service__icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* FAQ Item Animations */
+.faq__item {
+  position: relative;
+}
+
+.faq__title {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.faq__title:hover {
+  color: #0067ff;
+}
+
+.faq__icon {
+  transition: transform 0.3s ease;
+}
+
+.faq__item.active .faq__icon {
+  transform: rotate(180deg);
+}
+
+.faq__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq__item.active .faq__content {
+  max-height: 500px;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Testimonial Card Animations */
+.testimonial__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 103, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.testimonial__card:hover::before {
+  opacity: 1;
+}
+
+.testimonial__avatar {
+  transition: transform 0.3s ease;
+}
+
+.testimonial__card:hover .testimonial__avatar {
+  transform: scale(1.1);
+}
+
+/* Button Hover Effects */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Input Focus Effects */
+.input__group {
+  position: relative;
+}
+
+.input__field {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.input__field::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0067ff, #01b5c5);
+  transition: width 0.3s ease;
+}
+
+.input__field:focus::after {
+  width: 100%;
+}
+
+/* Loading Animation */
+.loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.loader div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: linear-gradient(to top, #0067ff, #01b5c5);
+  animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.loader div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.loader div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.loader div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0s;
+}
+
+@keyframes loader {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+/* Page Transition */
+.page__transition {
+  animation: pageIn 0.4s ease-out;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered List Animation */
+.list__item {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.list__item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.list__item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.list__item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.list__item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.list__item:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Glow Effect on Hover */
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 103, 255, 0.4);
+}
+
+/* Scale Effect */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Rotate Effect */
+.hover-rotate {
+  transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+/* Smooth Backdrop Blur */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+  background: #0067ff;
+  color: white;
+}
+
+::-moz-selection {
+  background: #0067ff;
+  color: white;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0067ff, #01b5c5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0052cc;
+}
+
+/* Placeholder Animation */
+::placeholder {
+  animation: placeholderGlow 2s ease-in-out infinite;
+}
+
+@keyframes placeholderGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Smooth Focus States */
+*:focus-visible {
+  outline: 2px solid #0067ff;
+  outline-offset: 2px;
+}
+
+/* Badge Pulse */
+.badge-pulse {
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Image Zoom on Hover */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.4s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Bounce Animation */
+.bounce-sm {
+  animation: bounceSm 1s infinite;
+}
+
+@keyframes bounceSm {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Text Underline Animation */
+.text-underline-animation {
+  position: relative;
+  text-decoration: none;
+}
+
+.text-underline-animation::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0067ff, #01b5c5);
+  transition: width 0.3s ease;
+}
+
+.text-underline-animation:hover::after {
+  width: 100%;
+}
+
+/* Multi-color Gradient Background */
+.gradient-animate {
+  background: linear-gradient(
+    -45deg,
+    #0067ff,
+    #01b5c5,
+    #feb60d,
+    #9771ff,
+    #0067ff
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive Animations - Disable for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

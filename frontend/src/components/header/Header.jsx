@@ -8,8 +8,8 @@ import { authContext } from "../../context/AuthContext";
 
 const navLinks = [
   { path: "/home", display: "Trang chủ" },
-  { path: "/doctors", display: "Bác sĩ" },
   { path: "/services", display: "Dịch vụ" },
+  { path: "/doctors", display: "Tìm Bác sĩ" },
   { path: "/contact", display: "Liên hệ" },
 ];
 

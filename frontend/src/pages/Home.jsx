@@ -16,6 +16,7 @@ import ServiceList from "../components/services/ServiceList.jsx";
 import DoctorList from "../components/doctors/DoctorList.jsx";
 import FaqList from "../components/faq/FaqList.jsx";
 import Testimonial from "../components/testimonial/Testimonial.jsx";
+import Doctors from "./Doctors/Doctors.jsx";
 
 const Home = () => {
   return (
@@ -38,7 +39,9 @@ const Home = () => {
                   Medicare.
                 </p>
 
-                <button className="btn">Đặt lịch ngay</button>
+                <Link to="/doctors">
+                  <button className="btn">Đặt lịch ngay</button>
+                </Link>
               </div>
 
               {/* ======== Hero Counter ======== */}
@@ -102,10 +105,11 @@ const Home = () => {
 
               <div className="mt-[30px]">
                 <h3 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
-                  Bác sĩ
+                  Đội ngũ bác sĩ
                 </h3>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text center">
-                  Chúng tôi cam kết tận tâm vì sức khoẻ công đồng
+                  Những chuyên gia y tế hàng đầu, luôn sẵn sàng đồng hành cùng
+                  bạn.
                 </p>
 
                 <Link
@@ -124,14 +128,15 @@ const Home = () => {
 
               <div className="mt-[30px]">
                 <h3 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
-                  Vị trí của chúng tôi
+                  Hệ thống cơ sở
                 </h3>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text center">
-                  Chúng tôi cam kết tận tâm vì sức khoẻ công đồng
+                  Phòng khám hiện đại, dễ tìm, phục vụ bạn một cách nhanh chóng
+                  và thuận tiện.
                 </p>
 
                 <Link
-                  to="/doctors"
+                  to="/contact"
                   className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] 
                     mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
                 >
@@ -146,14 +151,15 @@ const Home = () => {
 
               <div className="mt-[30px]">
                 <h3 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
-                  Đặt lịch
+                  Đặt lịch khám
                 </h3>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text center">
-                  Chúng tôi cam kết tận tâm vì sức khoẻ công đồng
+                  Lên lịch khám chỉ với một thao tác, tiết kiệm thời gian và chủ
+                  động hơn.
                 </p>
 
                 <Link
-                  to="/doctors"
+                  to="/services"
                   className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] 
                     mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
                 >
@@ -191,9 +197,7 @@ const Home = () => {
           <div className="flex items-center justify-between flex-col lg:flex-row">
             {/* ======== Feature Content ======== */}
             <div className="xl:w-[670px]">
-              <h2 className="heading">
-                Nhận điều trị bất cứ lúc nào.
-              </h2>
+              <h2 className="heading">Nhận điều trị bất cứ lúc nào.</h2>
 
               <ul className="pl-4">
                 <li className="text_para">

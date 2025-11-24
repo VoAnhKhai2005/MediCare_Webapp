@@ -1,0 +1,203 @@
+/* =============== LOADER ANIMATIONS =============== */
+
+@keyframes spinnerRotate {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotate(360deg) translateZ(0);
+  }
+}
+
+@keyframes dotPulse {
+  0%, 60%, 100% {
+    opacity: 0.3;
+    transform: translateY(0) translateZ(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-10px) translateZ(0);
+  }
+}
+
+@keyframes barWave {
+  0%, 100% {
+    transform: scaleY(0.4) translateZ(0);
+  }
+  50% {
+    transform: scaleY(1) translateZ(0);
+  }
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: -2000px 0;
+  }
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+/* =============== LOADER COMPONENTS =============== */
+
+.loader-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: spinnerRotate 1.2s linear infinite;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+.loader-spinner svg {
+  width: 100%;
+  height: 100%;
+  animation: spinnerRotate 1.2s linear infinite;
+}
+
+.loader-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: dotPulse 1.4s infinite ease-in-out;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.loader-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loader-bars {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+  justify-content: center;
+  height: 40px;
+}
+
+.loader-bars span {
+  width: 8px;
+  min-height: 20px;
+  background: currentColor;
+  border-radius: 4px;
+  animation: barWave 1s ease-in-out infinite;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.loader-bars span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loader-bars span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader-bars span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.loader-bars span:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* =============== SKELETON STYLES =============== */
+
+.skeleton-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 2000px 100%;
+  animation: skeletonShimmer 2.5s infinite;
+  border-radius: 6px;
+  backface-visibility: hidden;
+  will-change: background-position;
+}
+
+.skeleton-card {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 2000px 100%;
+  animation: skeletonShimmer 2.5s infinite;
+  border-radius: 8px;
+}
+
+.skeleton-text {
+  height: 16px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 2000px 100%;
+  animation: skeletonShimmer 2.5s infinite;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+.skeleton-avatar {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 2000px 100%;
+  animation: skeletonShimmer 2.5s infinite;
+}
+
+/* =============== LOADING STATES =============== */
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-content {
+  text-align: center;
+  animation: slideInUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============== GPU ACCELERATION =============== */
+
+.loader-spinner,
+.loader-dots span,
+.loader-bars span,
+.skeleton-loading,
+.skeleton-card {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

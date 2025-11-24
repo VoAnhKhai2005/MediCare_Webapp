@@ -1,2 +1,3 @@
-export const BASE_URL = "http://localhost:5000/api/v1"
-export const token = localStorage.getItem("token")
+// BASE_URL dùng relative path
+export const BASE_URL = "/api/v1";
+export const token = localStorage.getItem("token");
